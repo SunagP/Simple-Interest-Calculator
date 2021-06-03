@@ -1,7 +1,9 @@
 <html>
     <head>
+        <title> Simple Interest Calculator</title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body>
         <center>
@@ -21,8 +23,20 @@
         </div>
 
         <br>
-        <label>No. of years </label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="number"  id="years">  <br/>
+        <label style="padding-right:130px;">No. of years </label><span><select id="years" name="AgeDropdown"  class="AgeDropdown" > 
+            <option value="0" ></option>
+        </select>  </span> <br/>
+        <script>
+            var ddl = document.getElementById('years');
 
+                    for (var i = 1; i <= 100; i++) {
+                        var theOption = new Option;
+                        theOption.text = i;
+                        theOption.value = i;
+                        ddl.options[i] = theOption;
+                    }
+        </script>
+        
         <br>
         <button onclick=" compute()">Compute Intrest</button>
      <br><br>
@@ -35,6 +49,8 @@
     <p id="c1"></p>
     <p id="c2"></p>
     <p id="c3"></p>
+
+    <p id="cpr"><h4>&copy;Everyone Can Get Rich</h4></p>
     
 
  
