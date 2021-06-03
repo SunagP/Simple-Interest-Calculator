@@ -3,7 +3,7 @@ function sl(){
     var output = document.getElementById("demo");
     output.innerHTML = slider.value;
     
-    slider.onchange = function() {
+    slider.oninput = function() {
        output.innerHTML = this.value;
             }
           
