@@ -36,7 +36,7 @@ function highlight(text,pid) {
                 pr = parseInt(pr);
             t = parseInt(t);
             r = parseFloat(r);
-            var total = pr + (pr*r*t)/100;
+            var total =  (pr*r*t)/100;
             var totalT = t+2021;
             document.getElementById("c").innerHTML = "If you deposit "+ pr;
             document.getElementById("c1").innerHTML = "at an intrest rate of "+ r;
